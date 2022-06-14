@@ -1,5 +1,4 @@
-#include<ColorCoder_TestFile>
-#include <Telco_ColorCoder_header>
+#include "ColorCoder_TestFile.hpp"
 #include <assert.h>
 
 void testNumberToPair(int pairNumber,
