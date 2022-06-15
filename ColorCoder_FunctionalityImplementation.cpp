@@ -1,3 +1,4 @@
+// This File contains all the data and function definition for the implementation of color coder.
 	#include "ColorCoder_FunctionalityImplementation.hpp"
 
 	namespace TelCoColorCoder
@@ -12,20 +13,20 @@
         };
         int numberOfMinorColors =
         sizeof(MinorColorNames) / sizeof(MinorColorNames[0]);
-	    MajorColor ColorPair::getMajor() {
-			return majorColor;
+	    MajorColor ColorPair::getMajorColor() {
+			return m_majorColor;
 		}
-		MinorColor ColorPair::getMinor() {
-			return minorColor;
+		MinorColor ColorPair::getMinorColor() {
+			return m_minorColor;
 		}
-		std::string ColorPair::ToString() {
-			std::string colorPairStr = MajorColorNames[majorColor];
+		std::string ColorPair::formColorPairString() {
+			std::string colorPairStr = MajorColorNames[m_majorColor];
 			colorPairStr += " ";
-			colorPairStr += MinorColorNames[minorColor];
+			colorPairStr += MinorColorNames[m_minorColor];
 			return colorPairStr;
 		}
 		
-		ColorPair GetColorFromPairNumber(int pairNumber) {
+		ColorPair GetColorPairFromPairNumber(int pairNumber) {
 			int zeroBasedPairNumber = pairNumber - 1;
 			MajorColor majorColor = 
 				(MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
@@ -33,7 +34,7 @@
 				(MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
 			return ColorPair(majorColor, minorColor);
 		}
-		int GetPairNumberFromColor(MajorColor major, MinorColor minor) {
-			return major * numberOfMinorColors + minor + 1;
+		int GetPairNumberFromColorPair(MajorColor pairsMajorColor, MinorColor pairsMinorColor) {
+			return pairsMajorColor * numberOfMinorColors + pairsMinorColor + 1;
 		}
 	}

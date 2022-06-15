@@ -1,23 +1,25 @@
+// This File contains the Test case functions implementation.
+
 #include "ColorCoder_TestFile.hpp"
 #include <assert.h>
 
 void testNumberToPair(int pairNumber,
-    TelCoColorCoder::MajorColor expectedMajor,
-    TelCoColorCoder::MinorColor expectedMinor)
+    TelCoColorCoder::MajorColor expectedMajorColor,
+    TelCoColorCoder::MinorColor expectedMinorColor)
 {
     TelCoColorCoder::ColorPair colorPair =
-        TelCoColorCoder::GetColorFromPairNumber(pairNumber);
-    std::cout << "Got pair " << colorPair.ToString() << std::endl;
-    assert(colorPair.getMajor() == expectedMajor);
-    assert(colorPair.getMinor() == expectedMinor);
+        TelCoColorCoder::GetColorPairFromPairNumber(pairNumber);
+    std::cout << "Got pair " << colorPair.formColorPairString() << std::endl;
+    assert(colorPair.getMajorColor() == expectedMajorColor);
+    assert(colorPair.getMinorColor() == expectedMinorColor);
 }
 
 void testPairToNumber(
-    TelCoColorCoder::MajorColor major,
-    TelCoColorCoder::MinorColor minor,
+    TelCoColorCoder::MajorColor pairsMajorColor,
+    TelCoColorCoder::MinorColor pairsMinorColor,
     int expectedPairNumber)
 {
-    int pairNumber = TelCoColorCoder::GetPairNumberFromColor(major, minor);
+    int pairNumber = TelCoColorCoder::GetPairNumberFromColorPair(pairsMajorColor, pairsMinorColor);
     std::cout << "Got pair number " << pairNumber << std::endl;
     assert(pairNumber == expectedPairNumber);
 }

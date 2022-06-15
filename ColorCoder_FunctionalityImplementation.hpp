@@ -1,3 +1,5 @@
+// This File contains all the data and function decalration for the implementation of color coder.
+
 #include <iostream>
 namespace TelCoColorCoder
 {
@@ -11,19 +13,19 @@ namespace TelCoColorCoder
 
     class ColorPair {
         private:
-            MajorColor majorColor;
-            MinorColor minorColor;
+            MajorColor m_majorColor;
+            MinorColor m_minorColor;
         public:
             ColorPair(MajorColor major, MinorColor minor):
-                majorColor(major), minorColor(minor)
+                m_majorColor(major), m_minorColor(minor)
             {}
-            MajorColor getMajor();
+            MajorColor getMajorColor();
                
-            MinorColor getMinor();
+            MinorColor getMinorColor();
                 
-            std::string ToString();
+            std::string formColorPairString();
     };
 	
-	ColorPair GetColorFromPairNumber(int pairNumber);
-	int GetPairNumberFromColor(MajorColor major, MinorColor minor);
+	ColorPair GetColorPairFromPairNumber(int pairNumber);
+	int GetPairNumberFromColorPair(MajorColor pairsMajorColor, MinorColor pairsMinorColor);
 }	
