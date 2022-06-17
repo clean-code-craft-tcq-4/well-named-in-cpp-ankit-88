@@ -37,12 +37,13 @@
 		}
 		
 		void printColorCodeManual()
-		{
+		{	
+			printf("Pair		Major Color 	Minor Color \n");
 			for(int majorColorIndex=0; majorColorIndex<numberOfMajorColors; majorColorIndex++)
 			{
 				for(int minorColorIndex=0; minorColorIndex<numberOfMinorColors; minorColorIndex++)
 				{
-					printf("%d		%s		%s ",((numberOfMinorColors*majorColorIndex)+ minorColorIndex), *(MajorColorNames+majorColorIndex), *(MinorColorNames+minorColorIndex) );
+					printf("%d		%s		%s \n",((numberOfMinorColors*majorColorIndex)+ minorColorIndex), *(MajorColorNames+majorColorIndex), *(MinorColorNames+minorColorIndex) );
 				}
 			}
 		}
