@@ -42,7 +42,7 @@
 			{
 				for(int minorColorIndex=0; minorColorIndex<numberOfMinorColors; minorColorIndex++)
 				{
-					printf("%d		%s		%s ",((numberOfMinorColors*majorColorIndex)+ minorColorIndex), *(MajorColorNames+majorColorIndex), *(MinorColorNames+minorColorIndexColorIndex) );
+					printf("%d		%s		%s ",((numberOfMinorColors*majorColorIndex)+ minorColorIndex), *(MajorColorNames+majorColorIndex), *(MinorColorNames+minorColorIndex) );
 				}
 			}
 		}
