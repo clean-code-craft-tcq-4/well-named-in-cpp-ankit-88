@@ -28,4 +28,5 @@ namespace TelCoColorCoder
 	
 	ColorPair GetColorPairFromPairNumber(int pairNumber);
 	int GetPairNumberFromColorPair(MajorColor pairsMajorColor, MinorColor pairsMinorColor);
+	void printColorCodeManual();
 }	

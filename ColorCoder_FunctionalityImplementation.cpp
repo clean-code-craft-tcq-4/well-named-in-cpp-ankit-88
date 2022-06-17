@@ -37,4 +37,15 @@
 		int GetPairNumberFromColorPair(MajorColor pairsMajorColor, MinorColor pairsMinorColor) {
 			return pairsMajorColor * numberOfMinorColors + pairsMinorColor + 1;
 		}
+		
+		void printColorCodeManual()
+		{
+			for(int majorColorIndex=0; majorColorIndex<numberOfMajorColors; majorColorIndex++)
+			{
+				for(int minorColorIndex=0; minorColorIndex<numberOfMinorColors; minorColorIndex++)
+				{
+					printf("%d		%s		%s ",((numberOfMinorColors*majorColorIndex)+ minorColorIndex), *(MajorColorNames+majorColorIndex), *(MinorColorNames+minorColorIndexColorIndex) );
+				}
+			}
+		}
 	}
