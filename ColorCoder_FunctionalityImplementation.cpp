@@ -1,6 +1,5 @@
 // This File contains all the data and function definition for the implementation of color coder.
 	#include "ColorCoder_FunctionalityImplementation.hpp"
-
 	namespace TelCoColorCoder
 	{
 		const char* MajorColorNames[] = {
@@ -24,8 +23,7 @@
 			colorPairStr += " ";
 			colorPairStr += MinorColorNames[m_minorColor];
 			return colorPairStr;
-		}
-		
+		}	
 		ColorPair GetColorPairFromPairNumber(int pairNumber) {
 			int zeroBasedPairNumber = pairNumber - 1;
 			MajorColor majorColor = 
